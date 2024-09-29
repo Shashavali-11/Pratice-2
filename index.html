@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cube loader</title>
+</head>
+
+<style>
+    body{
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        perspective: 800px;
+        background-color: black;
+    }
+    .cube{
+        width: 200px;
+        height: 200px;
+        transform: rotateX(90deg) rotateY(90deg);
+        animation: rotate 10s infinite linear;
+        transform-style: preserve-3d;
+    }
+    .face{
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border: 2px solid red;
+    }
+    .face:nth-child(1){
+        transform: rotateY(1deg)
+        translateZ(100px);
+    }
+    .face:nth-child(2){
+        transform: rotateY(90deg)
+        translateZ(100px);
+    }
+    .face:nth-child(3){
+        transform: rotateY(180deg)
+        translateZ(100px);
+    }
+    .face:nth-child(4){
+        transform: rotateY(-90deg)
+        translateZ(100px);
+    }
+    .face:nth-child(5){
+        transform: rotateY(90deg)
+        translateZ (100px);
+    }
+    .face:nth-child(6){
+        transform: rotateY(-90deg)
+        translateZ (100px);
+    }
+    
+    
+    @keyframes rotate {
+        from{
+            transform: rotateX(45deg)
+            rotateY(45deg);
+        }
+        to{
+            transform: rotateY(45deg)
+            rotateY(45deg);
+        }
+        
+    }
+    
+
+
+
+
+</style>
+
+
+
+<body>
+    <div class="cube">
+        <div class="face" ></div>
+        <div class="face" ></div>
+        <div class="face" ></div>
+        <div class="face" ></div>
+        <div class="face" ></div>
+        <div class="face" ></div>
+    </div>
+    
+</body>
+</html>
